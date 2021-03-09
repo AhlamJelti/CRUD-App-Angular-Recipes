@@ -1,0 +1,8 @@
+<div class="card" style="width: 20rem">
+    <img class="card-img-top" style="height: 20rem" [src]="recipe.thumbnail" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{recipe.title}}</h5>
+      <p class="card-text">Cooking Time : {{recipe.cookingTime}}</p>
+      <a routerLink="/detail/{{recipe.id}}" class="btn btn-primary">See More</a>
+    </div>
+  </div>

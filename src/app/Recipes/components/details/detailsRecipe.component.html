@@ -1,0 +1,15 @@
+<h1>{{recipe.title}}</h1>
+<div class="details-card">
+
+    <div>
+        <img  [src]="recipe.thumbnail" alt="recipe.title">
+    </div>
+    <div>
+       <p>cooking Time : {{recipe.cookingTime}}</p> 
+       <h1 class="details-card-make">Ingredients  :</h1>
+       <p *ngFor="let ing of recipe.ingredients"> {{ing}}</p> 
+       <h1 class="details-card-make">How To make it  :</h1>
+       <p> {{recipe.make}}</p> 
+    </div>
+</div>
+<button (click)="goBack()">go back</button>

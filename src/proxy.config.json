@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://run.mocky.io/v3/4d3eef16-3619-41bf-90ac-01e0e8c6448b",
+      "secure": false,
+      "pathRewrite": {
+        "^/api": ""
+      },
+      "changeOrigin": true
+    }
+  }
