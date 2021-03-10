@@ -1,0 +1,16 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+       
+    <label for="fullName">
+    Name
+    </label>
+    <input name="fullName" ngModel required >
+    
+    
+    <label for="checkInDate">
+    checkInDate
+    </label>
+    <input type="date" name="checkInDate" ngModel>
+    
+    
+    <button>Submit</button>
+</form>

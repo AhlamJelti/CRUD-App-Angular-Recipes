@@ -17,6 +17,13 @@ export class RecipesService {
   public getRecipe(id: number):Observable<any>{
     return this.http.get(`${URL}/${id}`);
   }
+  editPassengers(recipe: recipe): Observable<recipe>{
+    return this.http.put<recipe>(`${URL}/${recipe.id}`,recipe);
+  }
+  add(recipe: recipe): Observable<recipe>{
+    return this.http.post<recipe>(URL,recipe);
+  }
+
   
   
 }

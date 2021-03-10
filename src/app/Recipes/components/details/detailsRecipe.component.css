@@ -1,3 +1,32 @@
+.title{
+    text-align: center;
+    margin-top: 40px;
+}
+
 .details-card {
     display: flex;
+    margin: 5em 10em;
+}
+
+.details-card-img-recipe {
+    width:35em;
+}
+
+.details-card-info{
+    margin-left: 50px;
+}
+.details-card-cooking{
+    display: flex;
+}
+
+.details-card-cooking-icon{
+    width: 40px;
+    height: 40px;
+}
+.details-card-cooking-time{
+    font-size: 20px;
+    margin-top: 2px;
+}
+.details-card-make-description{
+    width: 40em;
 }
