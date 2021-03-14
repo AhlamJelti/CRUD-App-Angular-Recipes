@@ -21,4 +21,12 @@ getRecipes(){
   this.recipeservice.getRecipes().subscribe(p => this.recipes=p)
 }
 
+removeRecipe(id: Number){
+  this.recipeservice.removeRecipe(id).subscribe(()=>
+  
+    this.recipes= this.recipes.filter(  p => p.id != id ));
+
+  
+}
+
 }

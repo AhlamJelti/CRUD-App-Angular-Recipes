@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { recipe } from 'src/assets/recipe';
+import { RecipesService } from '../../recipes.service';
 
 
 @Component({
@@ -10,12 +11,14 @@ import { recipe } from 'src/assets/recipe';
 export class RecipeComponent {
 
 @Input() recipe:recipe;
-
-  constructor(){}
+@Output() remove : EventEmitter<number> = new EventEmitter();
+  constructor( ){}
 
   ngOnInit() : void{
     
  }
 
-
+ handleRemove(id: number){
+  this.remove.emit(id);
+}
 }

@@ -5,4 +5,5 @@ export interface recipe {
     "thumbnail": String,
     "cookingTime": String,
     "make": String,
+    "file"?:File
 }

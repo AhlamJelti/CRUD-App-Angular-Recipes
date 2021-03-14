@@ -12,7 +12,7 @@ import { Location } from '@angular/common'
 export class DetailsRecipeComponent {
 
  recipe:recipe;
-
+ 
 
   constructor( private route: ActivatedRoute,
     private recipeService: RecipesService,
@@ -23,9 +23,7 @@ export class DetailsRecipeComponent {
  }
 
  getRecipe(): void {
-   
-   const id = +this.route.snapshot.paramMap.get('id');
-  
+  const id = +this.route.snapshot.paramMap.get('id');
 this.recipeService.getRecipe(id)
     .subscribe(rec => this.recipe=rec)
   
@@ -33,6 +31,8 @@ this.recipeService.getRecipe(id)
  goBack(): void {
   this.location.back();
 }
+
+
 
 
 }

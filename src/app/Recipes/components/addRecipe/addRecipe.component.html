@@ -1,16 +1,71 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" >
-       
-    <label for="fullName">
-    Name
+<app-nav></app-nav>
+<form class="container" [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    
+    <input formControlName="id" [ngModel]="recipes[recipes.length-1].id+1"  hidden/>
+
+    <div  class="Section">
+    <div class="first">
+    <label>Title:</label>
+    </div>
+    <div class="second">
+    <input class="form-control" formControlName="title" />
+    </div>
+    </div>
+
+    <div class="Section">
+    <div class="first">
+    <label>Ingredients :</label>
+    </div>
+    <div   *ngFor="let control of ingredients.controls; index as i ">
+        <div class="second"> <input  style="width: 40em;  padding: 4px;" [formControl]="ingredients.controls[i] "/>
+            <button type="button" class="btn-remove" (click)="deleteIngredients(i)">-</button></div>
+
+    
+   
+    </div>
+    <button class="btn btn-primary" type="button" class="btn-add" (click)="addIngredients()">+ Add Ingredient</button>
+    </div>
+
+    <div class="Section">
+        <div class="first">
+        <label>
+            Image URL: 
+        </label>
+        </div>
+        <div class="second">
+        <input class="form-control"  formControlName="thumbnail" />
+        </div>
+        </div>
+
+    <div class="Section">
+    <div class="first">
+    <label>
+        cookingTime: 
     </label>
-    <input name="fullName" ngModel required >
-    
-    
-    <label for="checkInDate">
-    checkInDate
-    </label>
-    <input type="date" name="checkInDate" ngModel>
-    
-    
-    <button>Submit</button>
+    </div>
+    <div class="second">
+    <input class="form-control"  formControlName="cookingTime" />
+    </div>
+    </div>
+
+    <div class="Section">
+    <div class="first">
+    <label>make:</label>
+    </div>
+    <div class="second">
+    <textarea style="height:200px" class="form-control" rows="3" formControlName="make" > </textarea>
+    </div>
+    </div>
+    <div>
+    <!--<input type="file" formControlName="file" (change)="onFileChange($event)"  />-->
+
+    </div>
+
+    <button class="btn-submit" type="submit" [disabled]="!recipeForm.valid">Submit</button>
+
 </form>
+
+
+
+   
+

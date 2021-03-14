@@ -1,8 +1,17 @@
-<div class="card" style="width: 20rem">
+
+<div class="card" style="width: 29rem">
+ 
     <img class="card-img-top" style="height: 20rem" [src]="recipe.thumbnail" alt="Card image cap">
     <div class="card-body" style="height: 10rem">
       <h5 class="card-title">{{recipe.title}}</h5>
       <p class="card-text">Cooking Time : {{recipe.cookingTime}}</p>
-      <a routerLink="/detail/{{recipe.id}}" class="btn btn-primary">See More</a>
+      
+      <a routerLink="/detail/{{recipe.id}}" class="btn btn-success">See More</a>
+    
+      <a  class="edit-icon" routerLink="/edit/{{recipe.id}}" ><img src="https://img.icons8.com/office/30/000000/edit.png"/></a>
+      <a  (click)="handleRemove(recipe.id)"><img src="https://img.icons8.com/windows/32/000000/trash.png"/></a>
+    
     </div>
+    
+    
   </div>

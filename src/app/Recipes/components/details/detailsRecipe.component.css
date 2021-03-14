@@ -1,5 +1,7 @@
 .title{
     text-align: center;
+    font-size: 40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     margin-top: 40px;
 }
 
@@ -9,14 +11,16 @@
 }
 
 .details-card-img-recipe {
-    width:35em;
+    width:80%;
+    margin-top: 20px;
 }
 
 .details-card-info{
-    margin-left: 50px;
+    margin-left: 0px;
 }
 .details-card-cooking{
     display: flex;
+    margin-top: 20px;
 }
 
 .details-card-cooking-icon{
@@ -24,9 +28,27 @@
     height: 40px;
 }
 .details-card-cooking-time{
-    font-size: 20px;
-    margin-top: 2px;
+    font-size: 23px;
+    font-family: cursive;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.details-card-cooking-edit-icon{
+    margin-left: 20px;
 }
 .details-card-make-description{
-    width: 40em;
+    width: 35em;
+    font-size: 22px;
+    font-family:"Goudy Bookletter 1911", sans-serif;
+}
+.details-card-info-title{
+    margin-top: 15px;
+    font-size: 30px;
+    color: #4CAF50;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.details-card-ingredient{
+    font-size: 20px;
+    font-family:'Arial Narrow Bold', sans-serif;
 }

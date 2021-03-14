@@ -1,20 +1,23 @@
+<app-nav></app-nav>
 <h1 class="title">{{recipe.title}}</h1>
 <div class="details-card">
 
-    <div>
+    <div style="width: 50%;">
         <img class="details-card-img-recipe" [src]="recipe.thumbnail" alt="recipe.title">
+        <div class="details-card-cooking">
+            <img class="details-card-cooking-icon" src="https://img.icons8.com/color/48/000000/time-machine--v1.png"/>
+          
+            <p class="details-card-cooking-time"> cooking Time : {{recipe.cookingTime}}</p>
+            
+            <button style="margin-left: 320px; width:100px"  class="btn btn-success" routerLink="/edit/{{recipe.id}}" >Edit </button>
+         </div>
     </div>
     <div class="details-card-info">
-        
-       <div class="details-card-cooking">
-           <img class="details-card-cooking-icon" src="https://img.icons8.com/nolan/64/time.png"/>
-           <p class="details-card-cooking-time"> cooking Time : {{recipe.cookingTime}}</p> 
-        </div> 
-       <h1 class="details-card-make">Ingredients  :</h1>
-       <p *ngFor="let ing of recipe.ingredients"> {{ing}}</p> 
-       <h1 class="details-card-make">How To make it  :</h1>
+       <h1 class="details-card-info-title">Ingredients  :</h1>
+       <p class="details-card-ingredient"*ngFor="let ing of recipe.ingredients"> {{ing}}</p> 
+       <h1 class="details-card-info-title">How To make it  :</h1>
        <p class="details-card-make-description"> {{recipe.make}}</p> 
     </div>
+
 </div>
-<button (click)="goBack()">go back</button>
-<button (click)="goBack()">Edit</button>
+

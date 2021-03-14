@@ -17,13 +17,16 @@ export class RecipesService {
   public getRecipe(id: number):Observable<any>{
     return this.http.get(`${URL}/${id}`);
   }
-  editPassengers(recipe: recipe): Observable<recipe>{
+  editRecipe(recipe: recipe): Observable<recipe>{
     return this.http.put<recipe>(`${URL}/${recipe.id}`,recipe);
   }
-  add(recipe: recipe): Observable<recipe>{
+  addRecipe(recipe: recipe): Observable<recipe>{
     return this.http.post<recipe>(URL,recipe);
   }
 
+  removeRecipe(id :Number):Observable<any | void>{
+    return this.http.delete(`${URL}/${id}`)
+}
   
   
 }

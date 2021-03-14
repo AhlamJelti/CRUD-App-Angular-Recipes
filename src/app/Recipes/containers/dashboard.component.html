@@ -1,4 +1,7 @@
-<h1>Your Recipes</h1>
+<app-nav></app-nav>
+<img src="../../images/logo.jpg"  alt="">
 <div class="recipes">
-<app-recipe *ngFor="let rec of recipes"  [recipe]="rec"></app-recipe>
+
+<app-recipe (remove)="removeRecipe($event)" *ngFor="let rec of recipes"  [recipe]="rec"></app-recipe>
+
 </div>
